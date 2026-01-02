@@ -1,0 +1,16 @@
+# Node/Next artifacts
+apps/web/node_modules/
+apps/web/.next/
+apps/web/package-lock.json
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+
+# Local env files
+.env
+.env.*
+
+# Misc
+AGENTS.md

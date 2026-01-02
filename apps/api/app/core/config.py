@@ -1,4 +1,6 @@
 from functools import lru_cache
+from typing import Optional
+
 from pydantic_settings import BaseSettings
 
 
@@ -8,9 +10,9 @@ class Settings(BaseSettings):
     secret_key: str = "super-secret-key"
     algorithm: str = "HS256"
     access_token_expire_minutes: int = 60
-    redis_url: str | None = None
-    garmin_username: str | None = None
-    garmin_password: str | None = None
+    redis_url: Optional[str] = None
+    garmin_username: Optional[str] = None
+    garmin_password: Optional[str] = None
     api_base_url: str = "http://localhost:8000"
 
     class Config:
