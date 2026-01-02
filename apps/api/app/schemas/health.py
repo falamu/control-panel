@@ -1,13 +1,14 @@
 from datetime import datetime
+from typing import Optional
 from pydantic import BaseModel
 
 
 class HealthSummary(BaseModel):
-    resting_hr: int | None = None
-    average_sleep_hours: int | None = None
-    training_load: int | None = None
-    notes: str | None = None
-    last_sync_at: datetime | None = None
+    resting_hr: Optional[int] = None
+    average_sleep_hours: Optional[int] = None
+    training_load: Optional[int] = None
+    notes: Optional[str] = None
+    last_sync_at: Optional[datetime] = None
 
     class Config:
         from_attributes = True
